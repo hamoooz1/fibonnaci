@@ -1,0 +1,20 @@
+.trail-dot {
+  position: absolute;
+  width: 10px; /* Size of the trail dot */
+  height: 10px;
+  border-radius: 50%; /* Makes the dot circular */
+  background-color: white; /* Black trail */
+  pointer-events: none; 
+  animation: fadeOut 0.5s forwards; 
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2); /* Slightly enlarge before fading out */
+  }
+}

@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import FibonnaciHome from './components/FibonnaciHome'
+import FirstPage from './components/FirstPage';
 
 function App() {
+  const [showFibonnaciPage, setShowFibonnaciPage] = useState(false);
+
+  const handleNextClick = () => {
+    setShowFibonnaciPage(true);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+    {showFibonnaciPage ? (
+      <FibonnaciHome />
+    ) : (
+      <FirstPage onNext={handleNextClick} />
+    )}
+  </div>
   );
 }
 
