@@ -29,7 +29,10 @@ function FibonnaciHome() {
   return (
     <div className="app-background">
       <CursorTrail />
-
+      <h1 className='welcome-sign'>
+        Welcome to Fibonnaci
+      </h1>
+      
     </div>
   );
 }

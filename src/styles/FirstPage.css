@@ -8,7 +8,6 @@
   width: 100%;
 }
 
-
 .content-overlay {
   position: absolute;
   top: 50%; 
@@ -20,7 +19,7 @@
   flex-direction: column;
 }
 
-h1 {
+h1.welcome-writer {
   background-color: rgba(0, 0, 0, 0.7); 
   padding: 15px 30px; 
   border-radius: 5px; 
@@ -33,7 +32,7 @@ h1 {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto;
   letter-spacing: .1em; 
-  animation: 
+  animation:  
     typing 4s steps(40, end),
     blink-caret .75s step-end infinite;
 }
@@ -69,4 +68,28 @@ button {
 
 button:hover {
   background-color: rgba(0, 0, 0, 0.9); 
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Original position */
+  }
+  50% {
+    transform: translateY(-15px); /* Bounce up by 15px */
+  }
+}
+
+/* Existing CSS remains the same */
+
+.bounce-letter span {
+  display: inline-block;
+  animation: bounce 1.5s ease-in-out forwards;
+  animation-iteration-count: 3; /* Only bounce 3 times */
+  animation-delay: calc(4s + 0.1s * var(--i)); /* Start bouncing after typing finishes */
+}
+
+/* Ensure that spaces between words are preserved */
+.bounce-letter .space {
+  display: inline-block;
+  width: 0.5em; /* Adjust the width of the space */
 }

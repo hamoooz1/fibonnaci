@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react';
-import '../styles/CursorTrail.css'
+import '../styles/CursorTrail.css';
 
 const CursorTrail = () => {
   
   useEffect(() => {
     const handleMouseMove = (event) => {
-      // Create a new div for the trail dot
-      const trailDot = document.createElement('div');
-      trailDot.className = 'trail-dot';
+      // Create a new div for the trail "cursor"
+      const trailCursor = document.createElement('div');
+      trailCursor.className = 'trail-cursor';
       
-      // Position the dot at the mouse cursor position
-      trailDot.style.left = `${event.pageX}px`;
-      trailDot.style.top = `${event.pageY}px`;
+      // Position the cursor trail
+      trailCursor.style.left = `${event.pageX}px`;
+      trailCursor.style.top = `${event.pageY}px`;
       
-      // Append the dot to the body
-      document.body.appendChild(trailDot);
+      // Append the trail to the body
+      document.body.appendChild(trailCursor);
       
-      // Remove the dot after 500ms to clear the trail
+      // Remove the trail after 500ms
       setTimeout(() => {
-        trailDot.remove();
+        trailCursor.remove();
       }, 500);
     };
 

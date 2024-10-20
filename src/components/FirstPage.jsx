@@ -2,29 +2,43 @@ import React, { useState } from 'react';
 import '../styles/FirstPage.css';
 
 function FirstPage({ onNext }) {
-  const [fade, setFade] = useState(false); // State to control the fade animation
-  const [zoom, setZoom] = useState(false); // State to control the zoom animation
+  const [fade, setFade] = useState(false);
+  const [zoom, setZoom] = useState(false);
 
-  // Function to handle the button click with animations
+  // Handle button click with animations
   const handleClick = () => {
-    setFade(true); // Start the fade-out animation
+    setFade(true);
     setTimeout(() => {
-      setZoom(true); // Start the zoom-in animation
-    }, 3000); // Delay for fade-out (3 seconds)
+      setZoom(true);
+    }, 3000);
     setTimeout(() => {
-      onNext(); 
-    }, 4000); 
+      onNext();
+    }, 4000);
   };
+
+  // Wrap each letter in a span and handle spaces correctly
+  const text = "Enter the Fibonacci Sequence";
+  const animatedText = text.split("").map((char, index) => (
+    <span 
+      key={index} 
+      style={{ '--i': index }}
+      className={char === " " ? "space" : ""}
+    >
+      {char}
+    </span>
+  ));
 
   return (
     <div className={`container-firstpage ${fade ? 'fade-out' : ''} ${zoom ? 'zoom-in' : ''}`}>
       <div className="content-overlay">
-        <h1 className={fade ? 'fade-out-text' : ''}>Enter the Fibonacci Sequence</h1>
+        {/* First, the typing animation, then bounce */}
+        <h1 className={fade ? 'fade-out-text' : 'welcome-writer bounce-letter'}>
+          {animatedText}
+        </h1>
         <button className={fade ? 'fade-out-button' : ''} onClick={handleClick}>Go to Fibonacci</button>
       </div>
     </div>
   );
 }
-
 
 export default FirstPage;

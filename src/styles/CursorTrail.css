@@ -1,20 +1,22 @@
-.trail-dot {
+.trail-cursor {
   position: absolute;
-  width: 10px; /* Size of the trail dot */
-  height: 10px;
-  border-radius: 50%; /* Makes the dot circular */
-  background-color: white; /* Black trail */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent; /* Creates the left side of the triangle */
+  border-right: 6px solid transparent; /* Creates the right side of the triangle */
+  border-bottom: 12px solid white; /* Creates the triangle resembling a cursor */
   pointer-events: none; 
-  animation: fadeOut 0.5s forwards; 
+  animation: fadeOut 0.5s forwards; /* Fade-out effect */
+  transform: rotate(45deg); /* Rotate the triangle to mimic the cursor angle */
 }
 
 @keyframes fadeOut {
   0% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) rotate(45deg); /* Cursor shape at full size and angle */
   }
   100% {
     opacity: 0;
-    transform: scale(2); /* Slightly enlarge before fading out */
+    transform: scale(1.5) rotate(45deg); /* Enlarges slightly before fading out */
   }
 }
