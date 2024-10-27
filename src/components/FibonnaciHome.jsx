@@ -1,38 +1,44 @@
 import '../styles/FibonnaciHome.css';
 import CursorTrail from './CursorTrail';
-import {useRef, useEffect} from 'react';
+import SoundBar from './SoundBar'; 
+import { useState, useEffect } from 'react';
 
 function FibonnaciHome() {
-  const audioRef = useRef(new Audio('/soundFibonnaci.mp3'));
+  // State for controlling image position
+  const [position, setPosition] = useState({ top: '50%', left: '50%' });
 
   useEffect(() => {
-    const audio = audioRef.current;
-
-    // Function to play audio
-    const playAudio = async () => {
-      try {
-        await audio.play();
-      } catch (error) {
-        console.error('Audio play failed:', error);
-      }
+    // Function to generate a random position
+    const getRandomPosition = () => {
+      const top = `${Math.floor(Math.random() * 80)}%`;
+      const left = `${Math.floor(Math.random() * 80)}%`;
+      return { top, left };
     };
 
-    playAudio();
+    // Set interval to update image position every 10 seconds
+    const intervalId = setInterval(() => {
+      setPosition(getRandomPosition());
+    }, 500);
 
-    return () => {
-      audio.pause(); 
-      audio.currentTime = 0;
-    };
-  }, []); 
-
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div className="app-background">
       <CursorTrail />
-      <h1 className='welcome-sign'>
-        Welcome to Fibonnaci
-      </h1>
+      <SoundBar /> {/* Render SoundBar at the top */}
+      <h1 className="welcome-sign">Welcome to Fibonacci</h1>
       
+      {/* Fading image element */}
+      <img
+        src="/fibonnaciFace.png" // Path to the image in public folder
+        alt="Fading Element"
+        className="fading-image"
+        style={{
+          top: position.top,
+          left: position.left,
+        }}
+      />
     </div>
   );
 }

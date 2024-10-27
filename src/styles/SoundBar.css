@@ -1,0 +1,12 @@
+.sound-bar {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Ensures the button is always on top */
+}
+
+.sound-toggle {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
