@@ -79,12 +79,10 @@ button:hover {
   }
 }
 
-/* Existing CSS remains the same */
-
 .bounce-letter span {
   display: inline-block;
   animation: bounce 1.5s ease-in-out forwards;
-  animation-iteration-count: 3; /* Only bounce 3 times */
+  animation-iteration-count: 1000000; /* Only bounce 3 times */
   animation-delay: calc(4s + 0.1s * var(--i)); /* Start bouncing after typing finishes */
 }
 

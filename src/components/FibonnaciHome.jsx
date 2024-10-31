@@ -1,44 +1,33 @@
 import '../styles/FibonnaciHome.css';
 import CursorTrail from './CursorTrail';
 import SoundBar from './SoundBar'; 
+import FadingImages from './FadingImages';
 import { useState, useEffect } from 'react';
 
 function FibonnaciHome() {
-  // State for controlling image position
-  const [position, setPosition] = useState({ top: '50%', left: '50%' });
-
-  useEffect(() => {
-    // Function to generate a random position
-    const getRandomPosition = () => {
-      const top = `${Math.floor(Math.random() * 80)}%`;
-      const left = `${Math.floor(Math.random() * 80)}%`;
-      return { top, left };
-    };
-
-    // Set interval to update image position every 10 seconds
-    const intervalId = setInterval(() => {
-      setPosition(getRandomPosition());
-    }, 500);
-
-    return () => clearInterval(intervalId);
-  }, []);
+  // Type write effect for welcome sign
+  const text = "Explore The Fibonacci Sequence";
+  const animatedText = text.split("").map((char, index) => (
+    <span 
+      key={index} 
+      style={{ '--i': index }}
+      className={` $char === " " ? "space" : "" `} 
+    >
+      {char}
+    </span>
+  ));
 
   return (
     <div className="app-background">
+      <div className="app-header">
+      <SoundBar />
+    </div>
+      <h1 className='welcome-sign'>
+          {animatedText}
+      </h1>
       <CursorTrail />
-      <SoundBar /> {/* Render SoundBar at the top */}
-      <h1 className="welcome-sign">Welcome to Fibonacci</h1>
-      
       {/* Fading image element */}
-      <img
-        src="/fibonnaciFace.png" // Path to the image in public folder
-        alt="Fading Element"
-        className="fading-image"
-        style={{
-          top: position.top,
-          left: position.left,
-        }}
-      />
+      <FadingImages />
     </div>
   );
 }

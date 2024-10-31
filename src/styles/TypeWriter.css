@@ -1,0 +1,42 @@
+.welcome-writer {
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 15px 30px; 
+  border-radius: 5px; 
+  display: inline-block; 
+  font-size: 36px;
+  margin-bottom: 20px;
+  transition: opacity 3s ease-in-out; 
+  overflow: hidden; 
+  border-right: .15em solid orange; /* Typing cursor */
+  white-space: nowrap; 
+  margin: 0 auto;
+  letter-spacing: .1em; 
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation for text */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+/* Individual character animation */
+.welcome-writer span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards, bounce 1.5s ease-in-out forwards;
+  animation-delay: calc(var(--i) * 0.1s); /* Delayed fade-in for typewriter effect */
+  animation-delay: calc(var(--i) * 0.1s), 4s; /* Starts bounce after 4 seconds */
+}
+
+/* Space styling for accurate word spacing */
+.space {
+  display: inline-block;
+  width: .2em;
+}

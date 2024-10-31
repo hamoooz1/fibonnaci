@@ -1,0 +1,29 @@
+.fading-images-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative; /* This can stay relative but has no effect on fixed images */
+}
+
+.fading-image {
+  position: fixed; /* Anchor each image to the viewport */
+  width: 60px; /* Adjust size as needed */
+  height: 60px;
+  animation: fadeInOut 10s linear infinite;
+  transition: transform 3s ease-in-out;
+  z-index: -2;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

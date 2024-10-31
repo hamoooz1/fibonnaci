@@ -31,7 +31,6 @@ function FirstPage({ onNext }) {
   return (
     <div className={`container-firstpage ${fade ? 'fade-out' : ''} ${zoom ? 'zoom-in' : ''}`}>
       <div className="content-overlay">
-        {/* First, the typing animation, then bounce */}
         <h1 className={fade ? 'fade-out-text' : 'welcome-writer bounce-letter'}>
           {animatedText}
         </h1>

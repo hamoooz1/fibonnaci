@@ -1,8 +1,9 @@
 .sound-bar {
-  position: fixed;
+  justify-content: flex-end;
   top: 10px;
   right: 10px;
   z-index: 1000; /* Ensures the button is always on top */
+  margin: 1em;
 }
 
 .sound-toggle {

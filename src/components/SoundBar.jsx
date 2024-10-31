@@ -35,7 +35,7 @@ function SoundBar() {
   return (
     <div className="sound-bar">
       <img
-        src={sound ? '/sound-on.png' : '/sound-off.png'}
+        src={sound ? '/volumeOn.png' : '/volumeOff.jpg'}
         alt="Sound Toggle"
         className="sound-toggle"
         onClick={toggleSound}
