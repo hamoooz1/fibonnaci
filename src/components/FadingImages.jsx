@@ -40,6 +40,11 @@ function FadingImages() {
     return () => intervalIds.forEach(clearInterval);
   }, []);
 
+  // Function to get a random size between 30px and 80px
+  const getRandomSize = () => {
+    return `${Math.floor(Math.random() * 60) + 20}px`; // Random size between 30px and 80px
+  };
+
   return (
     <div className="fading-images-container">
       {images.map((src, index) => (
@@ -51,7 +56,9 @@ function FadingImages() {
           style={{
             top: positions[index].top,
             left: positions[index].left,
-            animationDelay: `${Math.random() * 5}s`, // Random delay for fade animation
+            width: getRandomSize(), // Apply random width
+            height: getRandomSize(), // Apply random height
+            animationDelay: `${Math.random() * 6}s`, // Random delay for fade animation
           }}
         />
       ))}

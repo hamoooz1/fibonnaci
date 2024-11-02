@@ -22,9 +22,11 @@ function FibonnaciHome() {
       <div className="app-header">
       <SoundBar />
     </div>
-      <h1 className='welcome-sign'>
-          {animatedText}
-      </h1>
+    <div className='typewriter-content'>
+    <h1 className='welcome-sign'>
+      {animatedText}
+    </h1>
+    </div>
       <CursorTrail />
       {/* Fading image element */}
       <FadingImages />

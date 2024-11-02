@@ -87,3 +87,13 @@
   50% { border-color: gold; }
 }
 
+.typewriter-content {
+  position: absolute;
+  top: 20%; 
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the content */
+  color: white; /* Make the text readable on the video */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
