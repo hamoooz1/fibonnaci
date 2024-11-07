@@ -1,0 +1,20 @@
+.line-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+  overflow: hidden; /* Ensures images don’t overflow */
+}
+
+.line-image {
+  margin: 0.2em; /* Smaller margin for tighter layout */
+  width: 6em;
+  height: 6em;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}

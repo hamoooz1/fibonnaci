@@ -3,6 +3,7 @@ import CursorTrail from './CursorTrail';
 import SoundBar from './SoundBar'; 
 import FadingImages from './FadingImages';
 import { useState, useEffect } from 'react';
+import LineUp from './LineUp';
 
 function FibonnaciHome() {
   // Type write effect for welcome sign
@@ -28,8 +29,8 @@ function FibonnaciHome() {
     </h1>
     </div>
       <CursorTrail />
-      {/* Fading image element */}
       <FadingImages />
+      <LineUp />
     </div>
   );
 }
