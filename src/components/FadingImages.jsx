@@ -42,7 +42,7 @@ function FadingImages() {
 
   // Function to get a random size between 30px and 80px
   const getRandomSize = () => {
-    return `${Math.floor(Math.random() * 60) + 20}px`; // Random size between 30px and 80px
+    return `${Math.floor(Math.random() * 30) + 50}px`; // Random size between 30px and 80px
   };
 
   return (
