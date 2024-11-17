@@ -1,16 +1,16 @@
 .welcome-writer {
-  background-color: rgba(0, 0, 0, 0.7); 
-  padding: 15px 30px; 
-  border-radius: 5px; 
-  display: inline-block; 
-  font-size: 36px;
-  margin-bottom: 20px;
-  transition: opacity 3s ease-in-out; 
-  overflow: hidden; 
-  border-right: .15em solid orange; /* Typing cursor */
-  white-space: nowrap; 
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2vh 4vw; /* Responsive padding based on viewport */
+  border-radius: 0.5vw; /* Responsive border radius */
+  display: inline-block;
+  font-size: 3vw; /* Responsive font size */
+  margin-bottom: 2vh; /* Responsive margin based on viewport height */
+  transition: opacity 3s ease-in-out;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .1em; 
+  letter-spacing: 0.1em;
   animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
@@ -31,12 +31,20 @@
   display: inline-block;
   opacity: 0;
   animation: fadeIn 0.5s forwards, bounce 1.5s ease-in-out forwards;
-  animation-delay: calc(var(--i) * 0.1s); /* Delayed fade-in for typewriter effect */
-  animation-delay: calc(var(--i) * 0.1s), 4s; /* Starts bounce after 4 seconds */
+  animation-delay: calc(var(--i) * 0.1s);
+  animation-delay: calc(var(--i) * 0.1s), 4s;
 }
 
 /* Space styling for accurate word spacing */
 .space {
   display: inline-block;
-  width: .2em;
+  width: 0.3vw; /* Responsive width for spacing between words */
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+  .welcome-writer {
+    font-size: 2.5vw; /* Slightly larger font size for larger screens */
+    padding: 2.5vh 5vw; /* Increase padding for larger screens */
+  }
 }

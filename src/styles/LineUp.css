@@ -2,19 +2,28 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  padding: 10px 0;
+  width: 100vw; /* Ensures it spans the full viewport width */
+  padding: 1vh 0; /* Responsive padding based on viewport height */
   z-index: 1000;
   overflow: hidden; /* Ensures images don’t overflow */
 }
 
 .line-image {
-  margin: 0.2em; /* Smaller margin for tighter layout */
-  width: 6em;
-  height: 6em;
+  margin: 0.3vw; /* Responsive margin for tighter layout */
+  width: 5vw; /* Scales with viewport width */
+  height: 5vw; /* Ensures square images that scale */
 }
 
 .slick-slide {
   display: flex;
   justify-content: center;
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+  .line-image {
+    width: 8vw; /* Slightly larger images for larger screens */
+    height: 8vw;
+    margin: 0.2vw; /* Reduced margin on larger screens for tighter fit */
+  }
 }

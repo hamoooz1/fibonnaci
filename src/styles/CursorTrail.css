@@ -2,18 +2,18 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-left: 6px solid transparent; /* Creates the left side of the triangle */
-  border-right: 6px solid transparent; /* Creates the right side of the triangle */
-  border-bottom: 12px solid white; /* Creates the triangle resembling a cursor */
-  pointer-events: none; 
-  animation: fadeOut 0.5s forwards; /* Fade-out effect */
-  transform: rotate(45deg); /* Rotate the triangle to mimic the cursor angle */
+  border-left: 0.8vw solid transparent; /* Scales proportionally with viewport width */
+  border-right: 0.8vw solid transparent;
+  border-bottom: 1.6vw solid white; /* Cursor triangle scales with screen size */
+  pointer-events: none;
+  animation: fadeOut 0.5s forwards;
+  transform: rotate(45deg);
 }
 
 @keyframes fadeOut {
   0% {
     opacity: 1;
-    transform: scale(1) rotate(45deg); /* Cursor shape at full size and angle */
+    transform: scale(1) rotate(45deg);
   }
   100% {
     opacity: 0;

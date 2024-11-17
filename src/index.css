@@ -3,9 +3,16 @@
 body {
   margin: 0;
   font-family: 'Geo', sans-serif;
+  font-size: 1.5vw;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 2.5vw; /* Larger font size for smaller screens */
+  }
 }
