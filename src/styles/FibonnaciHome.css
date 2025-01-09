@@ -85,6 +85,17 @@
   flex-direction: column;
 }
 
+.right-slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%; /* Full height of the viewport */
+  width: auto;  /* Adjust based on content or use a fixed width */
+  display: flex;
+  justify-content: center; /* Align items horizontally if needed */
+  align-items: center;     /* Align items vertically */
+}
+
 /* Media query for larger screens (e.g., desktops) */
 @media (min-width: 1200px) {
   .welcome-sign {
