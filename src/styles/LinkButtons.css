@@ -1,0 +1,21 @@
+.link-button {
+  border-radius: 90px;
+  margin-top: 30px;
+}
+
+.youtube-button {
+  margin-top: -10px;
+}
+
+.links-container {
+  border-radius: 45px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.border-links {
+  border: 3px solid white;
+  background-color: blue;
+}
