@@ -20,19 +20,20 @@ function LineUp() {
     dots: false,
     infinite: true,
     speed: 2000,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
-    vertical: true, 
+    vertical: true,
     autoplay: true,
     autoplaySpeed: 0,
-    cssEase: "linear"
+    cssEase: "linear",
+    pauseOnHover: false
   };
 
   return (
     <div className="vertical-line-container">
       <Slider {...settings}>
         {images.map((src, index) => (
-          <div key={index}>
+          <div key={index} className="carousel-item">
             <img
               src={src}
               alt={`Meme ${index + 1}`}
