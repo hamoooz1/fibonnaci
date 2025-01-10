@@ -30,7 +30,7 @@ function FibonnaciHome() {
     </div>
       <CursorTrail />
       <FadingImages />
-      <LineUp />
+      <LineUp  />
     </div>
   );
 }
