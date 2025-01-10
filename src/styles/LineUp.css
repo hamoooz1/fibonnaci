@@ -27,13 +27,24 @@
 }
 
 /* Optional media query for larger screens */
-@media (min-width: 1200px) {
+@media (min-height: 600px) {
   .vertical-line-container {
-    left: 40px; /* Increase offset for larger screens */
-    width: 150px; /* Adjust width for larger screens */
+    left: 40px; 
+    width: 180px; 
   }
   .vertical-line-image {
-    width: 120px; /* Larger images for bigger screens */
-    height: 120px; /* Keep aspect ratio consistent */
+    width: 80%;
+    height: 20vh; 
+  }
+
+  @media (max-width: 1000px) {
+    .vertical-line-container {
+      left: 40px; 
+      width: 180px; 
+    }
+    .vertical-line-image {
+      width: 80%;
+      height: 20vh; 
+    }
   }
 }
