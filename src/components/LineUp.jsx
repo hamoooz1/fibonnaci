@@ -24,7 +24,9 @@ function LineUp() {
     slidesToScroll: 1, // Scroll one slide at a time for smooth motion
     autoplay: true,
     autoplaySpeed: 0, // No delay between autoplay transitions
-    cssEase: "linear" // Linear easing for smooth, constant speed
+    cssEase: "linear", // Linear easing for smooth, constant speed
+    pauseOnHover: false,
+    vertical: true
   };
   
 
