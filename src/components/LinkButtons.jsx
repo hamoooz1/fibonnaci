@@ -16,7 +16,7 @@ function LinkButtons() {
     },
     {
       image: "/youtube.svg",
-      link: "https://www.google.com/search?q=rick+toll&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:d7b50f1f,vid:dQw4w9WgXcQ,st:0",
+      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       alt: "YouTube",
       width: "150",
       height: "150",
