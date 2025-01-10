@@ -28,10 +28,7 @@ function FibonnaciHome() {
       </div>
       <CursorTrail />
       <FadingImages />
-      <LineUp />
-      <div className="right-slider">
-        <LineUp />
-      </div>
+      <LineUp  />
     </div>
   );
 }

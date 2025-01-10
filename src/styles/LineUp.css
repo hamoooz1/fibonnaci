@@ -1,29 +1,39 @@
-.line-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw; /* Ensures it spans the full viewport width */
-  padding: 1vh 0; /* Responsive padding based on viewport height */
+.vertical-line-container {
+  position: fixed; /* Fixed position */
+  top: 0;
+  left: 20px; /* Offset slightly from the left side */
+  width: 120px; /* Width of the vertical carousel */
+  height: 100vh; /* Full height of the viewport */
   z-index: 1000;
-  overflow: hidden; /* Ensures images don’t overflow */
+  overflow: hidden; /* Prevent overflow of images */
+  background-color: rgba(0, 0, 0, 0.7); /* Optional background for contrast */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow for better separation */
 }
 
-.line-image {
-  margin: 0.3vw; /* Responsive margin for tighter layout */
-  width: 5vw; /* Scales with viewport width */
-  height: 5vw; /* Ensures square images that scale */
+.vertical-line-image {
+  display: block;
+  margin: 5px auto; /* Center images within the carousel */
+  width: 100px; /* Set fixed width */
+  height: 100px; /* Set fixed height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px; /* Optional: Add rounded corners for a clean look */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Optional: Add border for aesthetics */
 }
 
 .slick-slide {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-/* Media query for larger screens */
+/* Optional media query for larger screens */
 @media (min-width: 1200px) {
-  .line-image {
-    width: 8vw; /* Slightly larger images for larger screens */
-    height: 8vw;
-    margin: 0.2vw; /* Reduced margin on larger screens for tighter fit */
+  .vertical-line-container {
+    left: 40px; /* Increase offset for larger screens */
+    width: 150px; /* Adjust width for larger screens */
+  }
+  .vertical-line-image {
+    width: 120px; /* Larger images for bigger screens */
+    height: 120px; /* Keep aspect ratio consistent */
   }
 }

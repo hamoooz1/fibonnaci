@@ -19,26 +19,25 @@ function LineUp() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2000, // Much faster speed for continuous effect
-    slidesToShow: 6,
-    slidesToScroll: 1, // Scroll one slide at a time for smooth motion
+    speed: 2000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    vertical: true,
     autoplay: true,
-    autoplaySpeed: 0, // No delay between autoplay transitions
-    cssEase: "linear", // Linear easing for smooth, constant speed
-    pauseOnHover: false,
-    vertical: true
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    pauseOnHover: false
   };
-  
 
   return (
-    <div className='line-container'>
+    <div className="vertical-line-container">
       <Slider {...settings}>
         {images.map((src, index) => (
-          <div key={index}>
+          <div key={index} className="carousel-item">
             <img
               src={src}
               alt={`Meme ${index + 1}`}
-              className="line-image"
+              className="vertical-line-image"
             />
           </div>
         ))}
