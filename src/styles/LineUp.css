@@ -1,23 +1,23 @@
 .vertical-line-container {
-  position: fixed; /* Fixed position */
+  position: fixed; 
   top: 0;
-  left: 20px; /* Offset slightly from the left side */
-  width: 120px; /* Width of the vertical carousel */
-  height: 100vh; /* Full height of the viewport */
+  left: 20px; 
+  width: 120px; 
+  height: 100vh; 
   z-index: 1000;
-  overflow: hidden; /* Prevent overflow of images */
-  background-color: rgba(0, 0, 0, 0.7); /* Optional background for contrast */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow for better separation */
+  overflow: hidden; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); 
 }
 
 .vertical-line-image {
   display: block;
-  margin: 5px auto; /* Center images within the carousel */
-  width: 100px; /* Set fixed width */
-  height: 100px; /* Set fixed height */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 8px; /* Optional: Add rounded corners for a clean look */
-  border: 2px solid rgba(255, 255, 255, 0.2); /* Optional: Add border for aesthetics */
+  margin: 5px auto;
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .slick-slide {
@@ -26,7 +26,6 @@
   align-items: center;
 }
 
-/* Optional media query for larger screens */
 @media (min-height: 600px) {
   .vertical-line-container {
     left: 40px; 
