@@ -87,8 +87,8 @@
 
 .navbar {
   position: fixed;
-  top: 50%;
-  right: 6vw
+  top: 35%;
+  right: 2vw
 }
 
 /* Media query for larger screens (e.g., desktops) */

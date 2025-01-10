@@ -30,7 +30,8 @@ function FibonnaciHome() {
       <CursorTrail />
       <FadingImages />
       <LineUp  />
-      <LinkButtons className='navbar' />
+      
+      <LinkButtons />
     </div>
   );
 }
