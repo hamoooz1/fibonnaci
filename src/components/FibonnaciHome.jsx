@@ -8,7 +8,7 @@ import LinkButtons from "./LinkButtons";
 import Terminal from "./Terminal";
 
 function FibonnaciHome() {
-  // Type write effect for welcome sign
+
   const text = "Explore The Fibonacci Sequence";
   const animatedText = text.split("").map((char, index) => (
     <span
