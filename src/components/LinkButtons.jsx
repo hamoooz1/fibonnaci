@@ -15,29 +15,25 @@ function LinkButtons() {
       alt: "PumpFun",
     },
     {
-      image: "/youtube.svg",
-      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      alt: "YouTube",
-      width: "150",
-      height: "150",
+      image: "/dex.svg",
+      link: "https://dexscreener.com/",
+      alt: "Dex",
     },
   ];
 
   return (
-    <div className='border-links'>
-      <div className={`links-container navbar`}>
-        {links.map((button, index) => (
-          <a href={button.link} target="_blank">
-            <img
-              src={button.image}
-              alt={button.alt}
-              width={button.width ? button.width : "100"}
-              height={button.height ? button.height : "100"}
-              className={button.alt === "YouTube" ? "youtube-button link-button" : button.alt === "PumpFun" ? "" : "link-button"}
-            />
-          </a>
-        ))}
-      </div>
+    <div className={`links-container navbar`}>
+      {links.map((button, index) => (
+        <a href={button.link} target="_blank">
+          <img
+            src={button.image}
+            alt={button.alt}
+            width={button.width ? button.width : "100"}
+            height={button.height ? button.height : "100"}
+            className={button.alt === "PumpFun" ? "" : "link-button"}
+          />
+        </a>
+      ))}
     </div>
   );
 }

@@ -1,40 +1,69 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 .terminal {
-  border: 4px solid #00FDFF;
+  border: 4px solid #00fdff;
   padding: 20px;
   box-sizing: border-box;
   outline: none;
-  border-radius: 35px;
-  height: 70vh;
-  width: 70vh;
-  background-color: rgba(0, 0, 0, .90);
-  color: #00FDFF;
-  font-family: 'Fira Code', monospace;
+  /* border-radius: 35px; */
+  height: 200vh;
+  max-height: 200vh;
+  width: 50vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #00fdff;
+  font-family: "Fira Code", monospace;
   font-size: 14px;
+  overflow-y: overlay;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 70%;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
 }
 
 .input-container {
   display: flex;
-  align-items: center; /* Vertically align the span and input */
+  align-items: center;
+  /* Vertically align the span and input */
 }
 
 .input-container span {
-  margin-right: 8px; /* Add spacing between the span and input */
-  font-family: 'Fira Code', monospace; /* Match the input font for consistency */
+  margin-right: 8px;
+  /* Add spacing between the span and input */
+  font-family: "Fira Code", monospace;
+  /* Match the input font for consistency */
   font-size: 14px;
-  color: #00FDFF; /* Match the text color */
+  color: #00fdff;
+  /* Match the text color */
 }
 
 .input-container input {
-  border: none; /* Remove the border */
-  outline: none; /* Remove focus outline */
-  background-color: transparent; /* Transparent background for terminal style */
-  color: #00FDFF; /* Cyan text for terminal appearance */
-  font-family: 'Fira Code', monospace; /* Monospaced font for coding aesthetic */
-  font-size: 14px; /* Match the text size */
+  border: none;
+  /* Remove the border */
+  outline: none;
+  /* Remove focus outline */
+  background-color: transparent;
+  /* Transparent background for terminal style */
+  color: #00fdff;
+  /* Cyan text for terminal appearance */
+  font-family: "Fira Code", monospace;
+  /* Monospaced font for coding aesthetic */
+  font-size: 14px;
+  /* Match the text size */
+  width: 40vw;
 }
 
 .input-container form {
-  display: inline; /* Ensure form does not break to a new line */
+  display: inline;
+  /* Ensure form does not break to a new line */
 }

@@ -14,6 +14,9 @@
   align-items: center;
   z-index: -1;
 }
+.fill {
+  height: 80vh;
+}
 
 .app-header {
   display: flex;
@@ -87,8 +90,8 @@
 
 .navbar {
   position: fixed;
-  top: 35%;
-  right: 2vw
+  top: 37%;
+  right: 2vw;
 }
 
 /* Media query for larger screens (e.g., desktops) */
