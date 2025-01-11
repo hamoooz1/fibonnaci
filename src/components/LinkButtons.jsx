@@ -30,7 +30,7 @@ function LinkButtons() {
             alt={button.alt}
             width={button.width ? button.width : "100"}
             height={button.height ? button.height : "100"}
-            className={button.alt === "PumpFun" ? "" : "link-button"}
+            className={button.alt === "link-button" ? "" : "link-button"}
           />
         </a>
       ))}

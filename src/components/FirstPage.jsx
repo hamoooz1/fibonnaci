@@ -5,18 +5,12 @@ function FirstPage({ onNext }) {
   const [fade, setFade] = useState(false);
   const [zoom, setZoom] = useState(false);
 
-  // Handle button click with animations
   const handleClick = () => {
     setFade(true);
-    setTimeout(() => {
-      setZoom(true);
-    }, 3000);
-    setTimeout(() => {
-      onNext();
-    }, 4000);
+    setZoom(true);
+    onNext();
   };
 
-  // Wrap each letter in a span and handle spaces correctly
   const text = "Enter the Fibonacci Sequence";
   const animatedText = text.split("").map((char, index) => (
     <span 
