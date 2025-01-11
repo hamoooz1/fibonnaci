@@ -47,6 +47,10 @@
   /* Match the text color */
 }
 
+.response {
+  white-space: pre-wrap;
+}
+
 .input-container input {
   border: none;
   /* Remove the border */

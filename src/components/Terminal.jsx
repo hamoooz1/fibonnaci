@@ -64,7 +64,7 @@ function Terminal() {
       {history.map((entry, index) => (
         <div key={index}>
           <div>➜ {entry.command}</div>
-          <div>{entry.response}</div>
+          <div className="response">{entry.response}</div>
         </div>
       ))}
       <div ref={terminalEndRef} />
