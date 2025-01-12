@@ -1,8 +1,11 @@
 .link-button {
-  border-radius: 90px;
   margin: 10px;
   object-fit: cover; 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.rounded {
+  border-radius: 90px;
 }
 
 
@@ -19,3 +22,5 @@
   align-items: center;
   border: 3px solid white;
 }
+
+

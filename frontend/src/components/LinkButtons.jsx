@@ -1,6 +1,5 @@
 import "../styles/LinkButtons.css";
 import "../styles/FibonnaciHome.css";
-import { useRef, useEffect } from "react";
 
 function LinkButtons() {
   const links = [
@@ -28,9 +27,9 @@ function LinkButtons() {
           <img
             src={button.image}
             alt={button.alt}
-            width={button.width ? button.width : "100"}
-            height={button.height ? button.height : "100"}
-            className={button.alt === "link-button" ? "" : "link-button"}
+            width="100"
+            height="100"
+            className={button.alt === "PumpFun" ? "link-button" : "link-button rounded"}
           />
         </a>
       ))}
