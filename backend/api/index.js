@@ -13,12 +13,11 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions)); // Use the CORS middleware
-
 // Middleware
 app.use(bodyParser.json());
 
 // POST route to handle question
-app.post("/question", async (req, res) => {
+app.post("/api/question", async (req, res) => {
   const { question } = req.body;
 
   if (!question) {
