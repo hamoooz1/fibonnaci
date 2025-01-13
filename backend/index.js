@@ -1,9 +1,18 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
+const cors = require("cors"); // Import cors
 require("dotenv").config();
 
 const app = express();
+
+// Enable CORS for a specific domain
+const corsOptions = {
+  origin: "https://f1bonacc1s3q.xyz", // Allow requests from this domain
+  methods: ["GET", "POST"], // Allow specific methods if needed
+};
+
+app.use(cors(corsOptions)); // Use the CORS middleware
 
 // Middleware
 app.use(bodyParser.json());
@@ -32,14 +41,14 @@ app.post("/api/question", async (req, res) => {
           { role: "user", content: question },
         ],
         max_tokens: 50,
-        stop:"."
+        stop: ".",
       },
       {
         headers: {
           Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
           "Content-Type": "application/json",
         },
-      },
+      }
     );
 
     // Extract answer from OpenAI response

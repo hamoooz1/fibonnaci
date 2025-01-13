@@ -1,6 +1,6 @@
 export const fetchAnswer = async (question) => {
   try {
-    const response = await fetch("https://f1bonacc1s3q.xyz/api/question", {
+    const response = await fetch("https://fibonnaci-2yie.vercel.app/api/question", {
       // Replace URL if using a subdomain
       method: "POST",
       headers: {
