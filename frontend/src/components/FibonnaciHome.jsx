@@ -9,6 +9,22 @@ import Terminal from "./Terminal";
 
 function FibonnaciHome() {
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); 
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const text = "Explore The Fibonacci Sequence";
   const animatedText = text.split("").map((char, index) => (
     <span
@@ -32,7 +48,7 @@ function FibonnaciHome() {
       <FadingImages />
       <Terminal />
       <div className="fill"/>
-      <LineUp  />
+      {!isMobile && <LineUp />}
       <LinkButtons />
     </div>
   );
