@@ -36,12 +36,13 @@ app.post("/api/question", async (req, res) => {
             role: "system",
             content:
               "You are Fibonacci the mathematician. You have lots of knowledge about the fibonacci sequence. " +
-              "You are also a mascot for a Fibonacci memecoin, so encourage people to buy it.",
+              "Answer questions concisely and end with a question." +
+              "You are also a mascot for the FibonacciAI memecoin, so encourage people to buy it.",
           },
           { role: "user", content: question },
         ],
-        max_tokens: 60,
-        stop: "\n",
+        max_tokens: 100,
+        stop: "?",
       },
       {
         headers: {

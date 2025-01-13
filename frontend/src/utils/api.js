@@ -9,7 +9,7 @@ export const fetchAnswer = async (question) => {
       body: JSON.stringify({ question }),
     });
     const data = await response.json();
-    return data.answer + ".";
+    return data.answer + "?";
   } catch (error) {
     console.error("API error:", error);
     return "Failed to fetch answer.";
