@@ -37,6 +37,16 @@ function Terminal() {
       } else {
         setCount(0);
       }
+    } else if (value === "youngfib") {
+      setHistory([
+        ...history,
+        {
+          command: value,
+          response: Array(10)
+          .fill(<img src="/youngfib.png" alt="Young Fibonacci" className="youngfib-img" />)
+          .map((item, index) => <span key={index}>{item}</span>),
+        }
+      ]);
     } else {
       setHistory([
         ...history,
