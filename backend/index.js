@@ -4,7 +4,6 @@ const axios = require("axios");
 require("dotenv").config();
 
 const app = express();
-const PORT = process.env.PORT || 5001;
 
 // Middleware
 app.use(bodyParser.json());
@@ -54,6 +53,6 @@ app.post("/api/question", async (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(3000, () => {
+  console.log(`Server is running...`);
 });
