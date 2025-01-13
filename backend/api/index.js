@@ -40,8 +40,8 @@ app.post("/api/question", async (req, res) => {
           },
           { role: "user", content: question },
         ],
-        max_tokens: 50,
-        stop: ".",
+        max_tokens: 60,
+        stop: "\n",
       },
       {
         headers: {
