@@ -2,6 +2,7 @@ import "../styles/Terminal.css";
 import { useState, useEffect, useRef } from "react";
 import getResponse from "../utils/responses";
 import { fetchAnswer } from "../utils/api";
+import TypingEffect from "./TypingEffect";
 
 function Terminal() {
   const [history, setHistory] = useState([
@@ -156,9 +157,12 @@ function Terminal() {
       {history.map((entry, index) => (
         <div key={index}>
           <div>➜ {entry.command}</div>
-          <div className="response">{entry.response}</div>
+          <div className="response">
+            <TypingEffect text={entry.response} />
+          </div>
         </div>
       ))}
+
       <div ref={terminalEndRef} />
       <div className="input-container">
         <span>➜ ~/ </span>
@@ -173,7 +177,7 @@ function Terminal() {
           />
         </form>
       </div>
-      {thinking && <span>Thinking...</span>}
+      {thinking && <span className="thinking-animation">Thinking...</span>}
     </div>
   );
 }

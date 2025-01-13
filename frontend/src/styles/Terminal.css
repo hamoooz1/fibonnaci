@@ -86,3 +86,17 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.thinking-animation {
+  display: inline-block;
+  font-size: 14px;
+  color: #00fdff;
+  animation: blink 1s infinite;
+}
+
