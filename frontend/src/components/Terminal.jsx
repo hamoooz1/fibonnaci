@@ -4,7 +4,12 @@ import getResponse from "../utils/responses";
 import { fetchAnswer } from "../utils/api";
 
 function Terminal() {
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState([
+    {
+      command: "Welcome to FibonacciAI, here are the available commands",
+      response: getResponse("help"),
+    },
+  ]);
   const [value, setValue] = useState("");
   const [count, setCount] = useState(0);
   const [thinking, setThinking] = useState();
@@ -116,7 +121,9 @@ function Terminal() {
       const splitAsk = value.split(" ");
       if (splitAsk.length > 1) {
         setThinking(true);
-        const result = await fetchAnswer(value.substring(value.indexOf(" ") + 1));
+        const result = await fetchAnswer(
+          value.substring(value.indexOf(" ") + 1),
+        );
         setHistory([
           ...history,
           {
@@ -153,22 +160,20 @@ function Terminal() {
         </div>
       ))}
       <div ref={terminalEndRef} />
-        <div className="input-container">
-          <span>➜ ~/ </span>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              ref={inputRef}
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              onKeyDown={handleKeyDown}
-              readOnly={thinking}
-            />
-          </form>
-        </div>
-      {thinking && (
-        <span>Thinking...</span>
-      )}
+      <div className="input-container">
+        <span>➜ ~/ </span>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            ref={inputRef}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onKeyDown={handleKeyDown}
+            readOnly={thinking}
+          />
+        </form>
+      </div>
+      {thinking && <span>Thinking...</span>}
     </div>
   );
 }
