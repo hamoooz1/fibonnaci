@@ -2,12 +2,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
 require("dotenv").config();
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
 app.use(bodyParser.json());
+app.use(cors({ origin: "http://localhost:3000" }));
 
 // POST route to handle question
 app.post("/api/question", async (req, res) => {
@@ -22,15 +24,18 @@ app.post("/api/question", async (req, res) => {
     const response = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
-        model: "gpt-4", // Replace with the model of your choice
+        model: "gpt-4o-mini", // Replace with the model of your choice
         messages: [
           {
             role: "system",
             content:
-              "You are Fibonacci the mathematician. You have lots of knowledge about the fibonacci sequence. You like to answer questions in roundabout and mysterious ways.",
+              "You are Fibonacci the mathematician. You have lots of knowledge about the fibonacci sequence. " +
+              "You are also a mascot for a Fibonacci memecoin, so encourage people to buy it.",
           },
           { role: "user", content: question },
         ],
+        max_tokens: 50,
+        stop:"."
       },
       {
         headers: {
