@@ -11,7 +11,8 @@ function getResponse(command) {
         "ca\t prints the contact address\n" +
         "pumpfun\t prints the pumpfun link\n" +
         "fib\t prints the next fibonacci number\n" +
-        "clear\t clears the terminal\n"
+        "youngfib prints what you look like if you invest\n" +
+        "clear\t clears the terminal\n" 
       );
       break;
     default:

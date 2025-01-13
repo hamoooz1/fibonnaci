@@ -27,8 +27,6 @@ function LinkButtons() {
           <img
             src={button.image}
             alt={button.alt}
-            width="100"
-            height="100"
             className={button.alt === "PumpFun" ? "link-button" : "link-button rounded"}
           />
         </a>
