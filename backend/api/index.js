@@ -8,11 +8,12 @@ const app = express();
 
 // Enable CORS for a specific domain
 const corsOptions = {
-  origin: "https://f1bonacc1s3q.xyz", // Allow requests from this domain
+  origin: ["https://f1bonacc1s3q.xyz", "https://www.f1bonacc1s3q.xyz"], // Allow both www and non-www versions
   methods: ["GET", "POST"], // Allow specific methods if needed
 };
 
 app.use(cors(corsOptions)); // Use the CORS middleware
+
 // Middleware
 app.use(bodyParser.json());
 
