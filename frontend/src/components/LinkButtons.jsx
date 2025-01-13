@@ -22,7 +22,7 @@ function LinkButtons() {
 
   return (
     <div className={`links-container navbar`}>
-      {links.map((button, index) => (
+      {links.map(button => (
         <a href={button.link} target="_blank">
           <img
             src={button.image}
