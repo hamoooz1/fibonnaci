@@ -6,7 +6,7 @@ function Countdown({ onComplete, startCountdown }) {
 
   useEffect(() => {
     if (startCountdown && count === null) {
-      setCount(5); 
+      setCount(3); 
     }
 
     if (count > 0) {
